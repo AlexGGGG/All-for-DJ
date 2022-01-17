@@ -33,6 +33,7 @@ class News {
         $query = 'SELECT * FROM news where title like "%'.$s. '%" or text like "%'.$s. '%"';
         $db = new Database();
         $n = $db->getAll($query);
+        return $n;
 
     }
 }
