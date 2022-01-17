@@ -28,9 +28,16 @@ class Controller {
         $n = News::getNewsByID($id);
         include_once 'view/readnews.php';
     }
-
+    public static function SearchNews($search)
+    {  
+        $arr = News::getSearchNews($search);
+        include_once 'view/searchview.php';
+    }
     public static function error404() {
         include_once 'view/error404.php';
+    }
+    public static function info() {
+        include_once 'view/info.php';
     }
 
     public static function InsertComment($c, $id) {

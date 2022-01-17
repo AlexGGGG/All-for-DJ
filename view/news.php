@@ -12,9 +12,7 @@ class ViewNews {
     }
 
     public static function AllNews($arr) {
-
-
-        foreach ($arr as $value) {
+             foreach ($arr as $value) {
             echo "<li >" . $value['title'];
             Controller::CommentsCount($value['id']);
             echo "<a href='news?id=" . $value['id'] . "'>Next</a></li><br>";
@@ -28,6 +26,7 @@ class ViewNews {
         Controller::CommentsCountWithAncor($n['id']);
         echo "<p>" . $n['text'] . "<p>";
     }
+    
 
 // добавить методы для других видов представлений новостей
 }

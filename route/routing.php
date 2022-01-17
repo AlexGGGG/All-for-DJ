@@ -14,8 +14,12 @@ if ($path == '' OR $path == 'index' OR $path == 'index.php') {
     $response = Controller::NewsByCatID($_GET['id']);
 } elseif ($path == 'news' and isset($_GET['id'])) {
     $response = Controller::NewsByID($_GET['id']);
+} elseif ($path == 'search' and isset($_GET['search']))
+{    $response = Controller::SearchNews($_GET['search']);
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'], $_GET['id']);
+} elseif ($path == 'info') {
+    $response = Controller::info();
 }
 //--------------register user
 elseif ($path == 'registerForm' )

@@ -19,15 +19,15 @@
                         ?>
                     </ul>
                 </li>
-                <li><a href="testError">Info</a></li>
+                <li><a href="info">Info</a></li>
                 <li><a href="./">Home page</a></li>
                 <li><a href="registerForm">Register</a></li>
                 <div class="pull-right">
                     <li>
-                        <from action="search">
+                        <form action="search">
                             <input type="text" name="search">
                             <input type="submit" value="search">
-                        </from>
+                        </form>
                     </li>
                 </div>
             </ul>			
